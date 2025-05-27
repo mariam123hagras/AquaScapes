@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js/script.js">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+  
+    <title>Document</title>
+</head>
+<body>
+    <div class="body-content" style="background-color: rgb(236, 232, 232);">
+        <div class="section1">
+            <nav class="navbar navbar-expand-lg bg-secondary fixed-top navbar1">
+                <div class="container-fluid">
+                    <!-- Logo and Brand (always visible) -->
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.jpg" alt="Logo" class="rounded-circle img-fluid navbar-logo" style="height: 50px; width: auto;">
+                    </a>
+                    <span class="navbar-brand border-end text-center border-1 me-4 logo-name fw-bold gradient-text" style="width:139px;">AquaScapes</span>
+                    
+                    <!-- Toggle button for mobile (will appear only on small screens) -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <!-- Collapsible content (from Home to end) -->
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="#home"><span class="nav-words">Home</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="#link"><span class="nav-words">Link</span></a>
+                            </li>
+                            <li class="nav-item dropdown border border-3 rounded trips" style="height:45px">
+                                <a class="nav-link dropdown-toggle trips-text text-warning" href="#" role="button" data-bs-toggle="dropdown">
+                                    <span class="nav-words"><span class="T-letter">T</span>rips</span>
+                                </a>
+                                <ul class="dropdown-menu fs-5">
+                                    <li><a class="dropdown-item text-warning" href="#">The Blue Hole</a></li>
+                                    <li><a class="dropdown-item text-warning" href="#">Abu Dabbab</a></li>
+                                    <hr class="border border-warning border-2 opacity-100">
+                                    <li><a class="dropdown-item text-warning" href="#">Sharm El Sheikh</a></li>
+                                    <li><a class="dropdown-item text-warning" href="#">Hurghada</a></li>
+                                    <li><a class="dropdown-item text-warning" href="#">Dahab</a></li>
+                                    <li><a class="dropdown-item text-warning" href="#">More....</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="#About"><span class="nav-words">About</span></a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Search and Login (will also collapse on mobile) -->
+                        
+                        <div class="d-flex flex-column flex-md-row align-items-md-center">
+                            <!-- Search Form - full width on mobile -->
+                            <form class="w-75 mx-auto mb-2 mb-md-0 me-md-3">
+                              <input class="form-control" type="text" placeholder="Search">
+                            </form>
+                            
+                            <!-- Button Group - appears below on mobile -->
+                            <div class="d-flex mt-2 mt-md-0">
+                              <!-- Search Button -->
+                              <button class="btn btn-warning nav-button btn-md text-white ms-5 me-4" type="button">
+                                Search
+                              </button>
+                              
+                              <!-- Login Button -->
+                              <button type="button" class="btn btn-warning nav-button btn-md text-white" data-bs-toggle="modal" data-bs-target="#myModal">
+                                Login
+                              </button>
+                            </div><!-- /d-flex small -->
+                          </div><!-- d-flex big -->
+                        
+                    </div>
+                </div>
+            </nav><!-- /nav -->
+               <div class="modal" id="myModal"  class="alert-dismissible " style="opacity:1 !important;">
+                <div class="modal-dialog ">
+                <div class="modal-content " style="opacity:1 !important;">
+               
+                <!-- Modal Header -->
+                <div class="modal-header bg-warning text-light">
+                <h4 class="modal-title ">Login</h4>
+                 
+                    <button type="button" class="btn-close bg-light  " data-bs-dismiss="modal"></button>
+               
+                 
+                </div>
+               
+                <!-- Modal body -->
+                <div class="modal-body text-warning">
+                    <form action="/action_page.php">
+                        <div class="mb-3 mt-3">
+                        <label for="email" class="form-label fs-5">Email:</label>
+                        <input type="email" class="form-control border border-2 border-warning" id="email"  name="email">
+                        <p class="text-dark">we will never share your email with anyone else</p>
+                        </div>
+                        <div class="mb-3">
+                        <label for="pwd" class="form-label fs-5">Password:</label>
+                        <input type="password" class="form-control border border-2 border-warning" id="pwd" name="pswd">
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input bg-warning border-0" type="checkbox" id="mySwitch" name="Rememberme" value="yes" checked>
+                            <label class="form-check-label" for="mySwitch">Remember me</label>
+                           </div><!-- /form-check -->
+                           
+    
+                       </form><!-- modal body form -->
+                </div>
+               
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="submit" class="btn btn-warning text-light ms-3">login</button>
+                <button type="button" class="btn btn-warning text-light me-3" data-bs-dismiss="modal">Close</button>
+                </div><!-- /modal-footer -->
+               
+                </div>
+                </div>
+               </div><!-- /modal -->
+        
+            <div class="container-fluid position-relative">
+                <div class="social-icons  position-fixed end-0 z-3 p-2 top-50   translate-middle-y me-4 d-flex flex-column gap-4 text-center
+                ">
+                    <!-- end-0 to make the div in right side z-3 to ensure its above elements with
+                     position relative to the parent of this div
+                     top-50 with translate-middle-y makes the div in the middle height of screen 
+                     d-flex and flex-column to make icons appear vertical me-3 to make about cm from right text-wrning to make icons yellow-->
+                    <i class="fa-brands fa-square-facebook opacity-75"></i>
+                    <i class="fa-brands fa-whatsapp opacity-75 "></i>
+                    <i class="fa-brands fa-square-twitter opacity-75 "></i>
+                    <i class="fa-brands fa-linkedin opacity-75"></i>
+                    <i class="fa-brands fa-square-instagram opacity-75 "></i>
+                    <!-- i made the opacity to the i not the div because when i hover i hover on i so the 
+                     hover effect appears -->
+                </div><!-- /icons -->
+                   <!-- slide -->
+               <div id="demo" class="carousel slide " data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                
+                </div>
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner thecarousel">
+                <div class="carousel-item active thecarousel">
+                <img src="images/bluehole.jpg" alt="Los Angeles" class="d-block w-100 thecarousel">
+                
+                 
+                   
+                 
+                <div class="carousel-caption rounded py-4 ">
+                    <h1>The Blue Hole</h1>
+                    <p  class="p-caption">We had such a great time !!!</p>
+                    <button class="btn btn-warning  text-white">Visit Us</button>
+                   </div><!-- caption -->
+                </div>
+                <div class="carousel-item thecarousel">
+                <img src="images/beach1.jpg" alt="Chicago" class="d-block w-100 thecarousel">
+                <div class="carousel-caption rounded py-4 text-white">
+                    <h1>Abu Dabbab</h1>
+                    <p class="p-caption">We had such a great time in Dabbab!</p>
+                    <button class="btn btn-warning text-white">Visit Us</button>
+                   </div><!-- caption -->
+                </div>
+                <div class="carousel-item thecarousel">
+                    <img src="images/beach2.jpg" alt="Chicago" class="d-block w-100 thecarousel">
+                    <div class="carousel-caption rounded py-4 text-white">
+                        <h1>Dahab</h1>
+                        <p class="p-caption">We had such a great time in Dahab!</p>
+                        <button class="btn btn-warning text-white">Visit Us</button>
+                       </div><!-- caption -->
+                    </div>
+    
+                <div class="carousel-item thecarousel">
+                <img src="images/seabottom.jpg" alt="New York" class="d-block w-100 thecarousel">
+                <div class="carousel-caption rounded py-4">
+                    <h1>Hurghada</h1>
+                    <p  class="p-caption">We had such a great time in Hurghada!</p>
+                    <button class="btn btn-warning text-white">Visit Us</button>
+                   </div><!-- caption -->
+                </div>
+                </div>
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+               
+                <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              
+                <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            </div>
+        </div><!-- /section1 -->
+        <div class="divs  container-fluid ">
+            <div class="welcome container-fluid  p-4 rounded-bottom d-flex align-items-center" style="background-color:rgb(241, 226, 181); ">
+              <div class="welcome-div">
+                <h3 > <span class="gradient-text" >WELCOME</span></h3>
+                <p class="text-dark" >
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. At doloremque perspiciatis quae saepe eligendi eius est magni, aut molestias. Nostrum natus inventore sequi aspernatur veritatis explicabo assumenda deleniti ipsam ullam.
+        
+                </p>
+                <button class="btn btn-dark btn-lg" style="color: rgb(241, 226, 181)
+                 ;">Learn More</button>
+              </div><!-- /welcome-div -->
+                
+            </div><!-- welcome -->
+            <hr>
+            <div class=" container-fluid  rounded d-flex justify-content-center align-items-center mb-3 text-dark" style="height:160px; background-color: rgb(248, 188, 9);">
+               <h1 >popular destination in Egypt</h1>
+               
+            </div><!-- destination -->
+            <div id="accordion">
+                <div class="card">
+                <div class="card-header">
+                
+                <button class="accordion-button collapsedd-flex position-relative pe-4 fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" style="height:50px;">
+                    <span class="gradient-text">The Blue Hole</span>
+                    
+                        <i class="fa-solid fa-chevron-down position-absolute end-0 accordion-chevron"></i>
+                    
+                  </button><!-- /button -->
+                </div>
+                <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body"   style="background-color: rgb(236, 232, 232);">
+                   <p class="accodion-p" style="font-size:17px;">
+                    A legendary 130m-deep submarine sinkhole, famous for its crystal-clear waters and dramatic coral walls. A bucket-list dive spot with thrilling archway passages at 56m depth
+                   </p><!-- /p -->
+                   
+                </div><!-- /card-body -->
+                </div><!-- /collapseone -->
+                </div>
+                <div class="card">
+                <div class="card-header">
+                    
+                    <button class="accordion-button collapsedd-flex position-relative pe-4 fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" style="height:50px;">
+                        <span class="gradient-text">Abu Dabbab</span> 
+                        <!-- position-relative in button to make the chevron that 
+                         takes position absolute and end-0 be at the end of button -->
+                            <i class="fa-solid fa-chevron-down position-absolute end-0 accordion-chevron"></i>
+                        
+                      </button><!-- /button -->
+                </div><!-- /card-header -->
+                <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body"  style="background-color: rgb(236, 232, 232);">
+                    <p class="accodion-p" style="font-size:17px;">
+                        Renowned for its gentle dugongs and sea turtles grazing on seagrass. The sandy slope and vibrant reefs make it perfect for snorkeling and beginner divers.
+                    </p><!-- /p -->
+                   
+                </div><!-- card-body -->
+                </div><!-- /collapse2 -->
+                </div><!-- /card -->
+                <div class="card">
+                <div class="card-header">
+                    <button class="accordion-button collapsedd-flex position-relative pe-4 fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" style="height:50px;">
+                        <span class="gradient-text">Hurghada</span>
+                        
+                        
+                            <i class="fa-solid fa-chevron-down position-absolute end-0 accordion-chevron"></i>
+                        
+                      </button><!-- /button -->
+                </div>
+                <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body" style="background-color: rgb(236, 232, 232);">
+                    <p class="accordion-p" style="font-size:17px;">
+                        A Red Sea paradise with house reefs teeming with lionfish, morays, and clownfish. Ideal for drift dives, night diving, and lively shore excursions.
+                    </p><!-- /p -->
+                   
+                </div><!-- card-body -->
+                </div>
+                </div>
+                </div><!-- accordion -->
+        <hr>
+        </div><!-- all divs with text -->
+       
+      <div class="translatio-section">
+        <div class="translation">
+            <div class="translation-header rounded  d-flex justify-content-center align-items-center container-fluid text-dark bg-warning">
+               <h1 >
+                   Translate From Arabic To English   
+                </h1>
+            </div><!-- /translation-header -->
+               
+            <div class="translation-form rounded-bottom pt-4 position-relative">
+                <div class="formContent m-auto">
+                    <h3 class="text-dark">Write And Translate <a href="" class="active text-decoration-none"> <span style=" color:rgb(236, 179, 7);">Press Here</span></a></h3>
+                    <button type ="button" class=" btn btn-light  btn-md border border-2 border-white copy-btn "  data-toggle="tooltip" data-placement="top" title="Copy to Clipboard"  style=" font-size: 20px;">Copy</button>
+                    <div class="copy-message text-center rounded"></div><!-- copy-message -->
+                    <div class="form-floating mb-3 mt-3">
+                     <textarea class="form-control " id="comment" name="text" placeholder="Comment goes here" style="height:150px;">
+                     </textarea>
+                     <label for="comment" class="text-secondary fs-5" > translte:</label>
+                     </div>
+                </div><!-- /formcontent -->
+               
+              
+               </form><!-- text area -->
+             
+            </div><!-- translation-form -->
+           </div><!-- translation -->
+           <hr>
+           <div class="translation ">
+               <div class="translation-header rounded  d-flex justify-content-center align-items-center container-fluid dark bg-warning ">
+                   <h1 class="">
+                       Translate From Arabic To French
+                    </h1>
+                </div><!-- /translation-header -->
+               <div class="translation-form rounded-bottom pt-4 position-relative">
+                <div class="formContent m-auto">
+                    <h3 class="text-dark">Write And Translate <a href="" class="active text-decoration-none"><span  style=" color:rgb(236, 179, 7);" >Press Here</span></a></h3>
+                    <button type ="button" class=" btn btn-light btn-md border border-2 border-white copy-btn" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard"  style=" font-size: 20px;">Copy</button>
+                    <div class="copy-message text-center rounded"></div><!-- copy-message -->
+                    <div class="form-floating mb-3 mt-3">
+                     <textarea class="form-control " id="comment" name="text" placeholder="Comment goes here" style="height:150px;">
+                     </textarea>
+                     <label for="comment" class="text-secondary fs-5"> translte:</label>
+                     </div>
+                </div><!-- /formcontent -->
+                   
+                 
+                  </form><!-- text area -->
+                
+               </div>
+              </div><!-- translation -->
+              <hr>
+              <div class="translation ">
+               <div class="translation-header rounded  d-flex justify-content-center align-items-center container-fluid text-dark bg-warning">
+                   <h1 class="">
+                       Translate From Arabic To German
+                    </h1>
+                </div><!-- /translation-header -->
+               <div class="translation-form  rounded-bottom pt-4 position-relative">
+                  <div class="formContent m-auto">
+                    <h3 class="text-dark">Write And Translate <a href="" class="active text-decoration-none"><span  style=" color:rgb(236, 179, 7);">Press Here</span></a></h3>
+                    <button type ="button" class=" btn btn-light border border-2 border-white btn-md copy-btn " data-toggle="tooltip" data-placement="top" title="Copy to Clipboard"  style=" font-size: 20px;">Copy</button>
+                    <div class="copy-message text-center rounded"></div><!-- copy-message -->
+                    <div class="form-floating mb-3 mt-3">
+                     <textarea class="form-control" id="comment" name="text" placeholder="Comment goes here" style="height:150px;">
+                     </textarea>
+                     <label for="comment" class="text-secondary fs-5"> translte:</label>
+                     </div>
+                  </div><!-- /form content -->
+                 
+                  </form><!-- text area -->
+                
+               </div>
+              </div><!-- translation -->
+              <hr class="mb-4 mt-4">
+      </div><!-- /translation section sec2 --> 
+      <div class="sec3">
+        <div class="sec3-content">
+            <div class="sec3-overlay">
+    
+            </div><!-- /sec3-overlay -->
+            <!-- i made sec3-cotent to make background image to it 
+             and make it fixed then overlay to make part of it shown while
+             scrolling down,then i made section to put the title of cards and the 
+             cards to make a special background to it -->
+               <div class="cards-sec" style="background-color: rgb(236, 232, 232);">
+                <div class="cards-title w-100  bg-warning d-flex justify-content-center align-items-center rounded " style="height: 90px;">
+                    <h1>  <span class="gradient-text">popular Destinations In Egypt</span></h1>
+              </div><!-- /cards title -->
+              <div class="cards-container py-5">
+                <div class="row  d-flex justify-content-between ">
+                    <div class=" col-12 col-md-4 mb-5 ">
+                        
+                            <div class="card card-styles px-3 card-after text-warning mx-auto shadow-lg">
+                                <img class="card-img-top h-85 img-fluid" src="images/beach1.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center "> <!-- Flex container -->
+                                        <h4 class="card-title mb-0">John Doe</h4> <!-- mb-0 removes default margin -->
+                                        <a href="#" class="btn btn-warning btn-lg text-white ">See Profile</a>
+                                    </div><!-- /d-flex -->
+                                <h6 class="card-text lead ">Some example text.</h6>
+                                </div><!-- /card-body -->
+                                </div><!-- card1 -->
+                        
+    
+                    </div><!-- col1 -->
+                    <!-- i made the cards into raw to make them beside eachother 
+                     and d-flex with justify content between to make equal width between cards 
+                     and p-4 to make spaces from all sides around card 
+                     i made the div padding to add more padding from x axix 
+                     to make it such the original task ,the class card style in the card div
+                     to made the specified heigth for the class 
+                     and px-3 in that div to leave space before the image card in x axis 
+                     in the img tag h-85 i made it with css to adjust the height of image in the card
+                     ,in the card body i made a div with d-flex and justify content between and align items center 
+                     to put both the header and button beside each other
+                     ,the class lead for h6 to make text bigger ,all the above row is duplicated to make 
+                     the second 3 cards -->
+                     
+                    
+                    <div class="col-12 col-md-4  mb-5">
+                        
+                            <div class="card px-3 card-after card-styles text-warning mx-auto shadow-lg"  >
+                                <img class="card-img-top h-85 img-fluid" src="images/beach2.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2"> <!-- Flex container -->
+                                        <h4 class="card-title mb-0">John Doe</h4> <!-- mb-0 removes default margin -->
+                                        <a href="#" class="btn btn-warning text-white btn-lg">See Profile</a>
+                                    </div><!-- /d-flex -->
+                                    <h6 class="card-text lead ">Some example text.</h6>
+                                </div>
+                                </div><!-- card2 -->
+                        
+                
+                    </div><!-- /col -->
+                     
+                  
+                     <div class="col-12 col-md-4  mb-5">
+                       
+                            <div class=" card  px-3 card-after card-styles text-warning mx-auto shadow-lg"  >
+                                <img class="card-img-top h-85 img-fluid" src="images/beach5.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center"> <!-- Flex container -->
+                                        <h4 class="card-title mb-0">John Doe</h4> <!-- mb-0 removes default margin -->
+                                        <a href="#" class="btn btn-warning text-white btn-lg ">See Profile</a>
+                                    </div><!-- /d-flex -->
+                                    <h6 class="card-text lead ">Some example text.</h6>
+                                </div>
+                                </div><!-- /card3 -->
+                        
+                        
+                            
+
+                       
+                         
+                     </div><!-- /col -->
+                    </div><!-- /row -->
+                    <div class="row  d-flex justify-content-between   ">
+                       <div class="col-12 col-md-4  mb-5">
+                        
+                            <div class="card card-after px-3 card-styles text-warning  mx-auto shadow-lg">
+                                <img class="card-img-top h-85 img-fluid" src="images/beach6.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center"> <!-- Flex container -->
+                                        <h4 class="card-title mb-0">John Doe</h4> <!-- mb-0 removes default margin -->
+                                        <a href="#" class="btn btn-warning text-white btn-lg">See Profile</a>
+                                    </div><!-- /d-flex -->
+                                    <h6 class="card-text lead ">Some example text.</h6>
+                                </div>
+                                </div><!-- card1 -->
+                        
+                       
+                       </div><!-- col1 -->
+                        
+                       
+                       <div class="col-12 col-md-4  mb-5">
+                       
+                            <div class="card card-after px-3 card-styles text-warning  mx-auto shadow-lg" >
+                                <img class="card-img-top h-85 img-fluid" src="images/beach7.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center"> <!-- Flex container -->
+                                        <h4 class="card-title mb-0">John Doe</h4> <!-- mb-0 removes default margin -->
+                                        <a href="#" class="btn btn-warning text-white btn-lg">See Profile</a>
+                                    </div><!-- /d-flex -->
+                                    <h6 class="card-text lead ">Some example text.</h6>
+                                </div>
+                                </div><!-- card2 -->
+                        
+                        
+                       </div><!-- /col -->
+                        
+                     
+                       <div class="col-12 col-md-4  mb-5">
+                        
+                            <div class="card px-3 card-after card-styles text-warning  mx-auto shadow-lg"  >
+                                <img class="card-img-top h-85 img-fluid" src="images/beach6.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2"> <!-- Flex container -->
+                                        <h4 class="card-title mb-0">John Doe</h4> <!-- mb-0 removes default margin -->
+                                        <a href="#" class="btn btn-warning text-white btn-lg">See Profile</a>
+                                    </div><!-- /d-flex -->
+                                    <h6 class="card-text lead ">Some example text.</h6>
+                                </div>
+                                </div><!-- card2 -->
+                       
+                     
+                    </div><!-- /col -->
+                        
+                      <!-- to make the spaces well between cards i put cards in columns for col-4 ,col-6 for last row and 
+                       gave the card itself mx-auto to be at the center of column 
+                       and for row i gave it d-flex and justify content between
+                       to make first and second coumn be at the edeges of row and equal spaces between them -->
+                    </div><!-- /row -->
+                      <div class="row d-flex justify-content-between align-items-center   ">
+                        <div class="col-12 col-md-6   mb-5">
+                           
+                                <div class="card card-after card-styles px-3  text-warning mx-auto shadow-lg" >
+                                    <img class="card-img-top h-85 img-fluid " src="images/beach9.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center"> <!-- Flex container -->
+                                            <h4 class="card-title mb-0">John Doe</h4> <!-- mb-0 removes default margin -->
+                                            <a href="#" class="btn btn-warning text-white btn-lg">See Profile</a>
+                                        </div><!-- /d-flex -->
+                                        <h6 class="card-text lead ">Some example text.</h6>
+                                    </div>
+                                    </div><!-- /card -->
+                               
+                        </div><!-- /col1 -->
+                           <div class="col-12 col-md-6  mb-5">
+                            
+                                <div class="card card-after card-styles px-3 text-warning  mx-auto shadow-lg ">
+                                    <img class="card-img-top h-85 img-fluid" src="images/seabottom.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center"> <!-- Flex container -->
+                                            <h4 class="card-title mb-0">John Doe</h4> <!-- mb-0 removes default margin -->
+                                            <a href="#" class="btn btn-warning text-white btn-lg">See Profile</a>
+                                        </div><!-- /d-flex -->
+                                        <h6 class="card-text lead ">Some example text.</h6>
+                                    </div>
+                                    </div><!-- /card2 -->
+                               
+                           </div><!-- /col-2 -->
+                           
+                      </div><!-- /row -->
+                    
+              </div><!-- /cards-container i put the actual cards in it to make
+              py-5 a space from top before cards -->                
+              
+               </div><!-- /cards-sec -->         
+               
+        </div><!-- /sec3-content -->
+
+      </div><!-- /sec3 -->
+      <div class="sec4">
+        <div class="sec4-mini-background">
+            <div class="sec4-overlay">
+            
+            </div><!-- /sec4-overlay -->
+            <div class="sec4-content   pt-2" style="background-color: rgb(236, 232, 232);">
+                <hr class="border  border-black">
+                <div class="  thanks bg-warning rounded mb-5  d-flex justify-content-center align-items-center container-fluid mt-4">
+                    <h1 class="gradient-text fs-1 lead">
+                        THANKS FOR
+                     </h1>
+                 </div><!-- /thanks -->
+                 <div class="container-person-card pt-4 mx-auto pb-5">
+                 <div class="row pb-5 ">
+                 
+                  
+                        <div class="col-12 col-md pb-5">
+                        <div class="card text-warning rounded rounded-4 border-0 position-relative person-card" style="height:550px;">
+                            <!-- Background Image (takes full card space) -->
+                            <img class="card-img h-100 w-100" src="images/man7.jpg" alt="Card image" style="object-fit: cover; border-radius: 16px;">
+                            
+                            <!-- Color Overlay with 50% opacity -->
+                            <div class="overlay-color position-absolute top-0 start-0 w-100 h-100" 
+                                 ></div>
+                            
+                            <!-- Content Container with padding -->
+                            <div class="card-img-overlay d-flex flex-column justify-content-between p-4">
+                                <!-- Top Content -->
+                                <div class="card-head">
+                                    <h4 class="card-title">All thanks and appreciation</h4> 
+                                    <span><i class="fa-solid fa-clock"></i> October 15, 2025</span>
+                                </div><!-- card-head -->
+                                
+                                <!-- Bottom Content (profile image + text) -->
+                                <div class="img-description ">
+                                    <img src="images/man7.jpg" 
+                                         class="rounded-circle border border-2 border-warning" 
+                                         style="width: 110px; height: 140px; object-fit: cover;"
+                                         alt="Profile">
+                                    <div>
+                                        <h5>Eng Mohamed Ramy</h5>
+                                        <h6 class="text-warning">Director of UI/UX</h6>
+                                    </div><!-- text -->
+                                </div><!-- img-description -->
+                            </div><!-- card-img-overlay -->
+                        </div><!-- /card -->
+                        </div><!-- column -->
+                        <div class="col-12 col-md pb-5">
+                            <div class="card text-warning rounded rounded-4 border-0 position-relative person-card" style="height:550px;">
+                                <!-- Background Image (takes full card space) -->
+                                <img class="card-img h-100 w-100" src="images/man6.jpg" alt="Card image" style="object-fit: cover; border-radius: 16px;">
+                                
+                                <!-- Color Overlay with 50% opacity -->
+                                <div class="overlay-color position-absolute top-0 start-0 w-100 h-100" 
+                                     ></div>
+                                
+                                <!-- Content Container with padding -->
+                                <div class="card-img-overlay d-flex flex-column justify-content-between p-4">
+                                    <!-- Top Content -->
+                                    <div class="card-head">
+                                        <h4 class="card-title">All thanks and appreciation</h4> 
+                                        <span><i class="fa-solid fa-clock"></i> October 15, 2025</span>
+                                    </div><!-- card-head -->
+                                    
+                                    <!-- Bottom Content (profile image + text) -->
+                                    <div class="img-description ">
+                                        <img src="images/man6.jpg" 
+                                             class="rounded-circle border border-2 border-warning" 
+                                             style="width: 110px; height: 140px; object-fit: cover;"
+                                             alt="Profile">
+                                        <div>
+                                            <h5>Eng Mohamed Ramy</h5>
+                                            <h6 class="text-warning">Director of UI/UX</h6>
+                                        </div><!-- text -->
+                                    </div><!-- img-description -->
+                                </div><!-- card-img-overlay -->
+                            </div><!-- /card -->
+                            </div><!-- column -->
+
+                        <div class="col-12 col-md pb-5">
+                            <div class="card text-warning rounded rounded-4 border-0 position-relative person-card" style="height:550px;">
+                                <!-- Background Image (takes full card space) -->
+                                <img class="card-img h-100 w-100" src="images/man8.jpg" alt="Card image" style="object-fit: cover; border-radius: 16px;">
+                                
+                                <!-- Color Overlay with 50% opacity -->
+                                <div class="overlay-color position-absolute top-0 start-0 w-100 h-100" 
+                                     ></div>
+                                
+                                <!-- Content Container with padding -->
+                                <div class="card-img-overlay d-flex flex-column justify-content-between p-4">
+                                    <!-- Top Content -->
+                                    <div class="card-head">
+                                        <h4 class="card-title">All thanks and appreciation</h4> 
+                                        <span><i class="fa-solid fa-clock"></i> October 15, 2025</span>
+                                    </div><!-- card-head -->
+                                    
+                                    <!-- Bottom Content (profile image + text) -->
+                                    <div class="img-description ">
+                                        <img src="images/man8.jpg" 
+                                             class="rounded-circle border border-2 border-warning" 
+                                             style="width: 110px; height: 140px; object-fit: cover;" 
+                                             alt="Profile">
+                                        <div>
+                                            <h5>Eng Mohamed Ramy</h5>
+                                            <h6 class="text-warning">Director of UI/UX</h6>
+                                        </div><!-- text -->
+                                    </div><!-- img-description -->
+                                </div><!-- /card-img-overlay -->
+                            </div><!-- /card -->
+                        </div><!-- col3 -->
+                        
+                  
+                 </div><!-- /row -->
+                 
+                  </div><!-- /container -->
+                  <hr class="border border-1 border-black mt-5 ">
+                
+            </div><!-- /sec4 content -->
+            
+        </div><!-- sec4-mini-background-->
+        
+      </div><!-- /sec4 -->
+      <div class="sec5">
+       <div class="sec5-content  container-podcast mx-auto">
+        <h2 class="gradient-text text-center pb-2">
+            EGYPT NEWS
+        </h2> 
+        <div class="row podcast-row d-flex  border border-1 ps-4  rounded rounded-lg  mb-4 shadow-lg">
+            <div class="podcast-title h-auto  pt-5 col-8 ">
+                <h1 class="pt-1 " style="color:rgb(198, 157, 32);" >Podcast title</h1>
+                <span class=""><i class="fa-regular fa-calendar-days"></i> Sun,April 19th 2025</span>
+                <div class="line mb-2 mt-3">
+      
+                </div><!-- /line -->
+                <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At soluta minus molestiae ea dolorem impedit veritatis saepe harum, quisquam, doloremque sequi? Adipisci, voluptate? Ad blanditiis voluptates eum aspernatur dicta. Doloremque, voluptate? Optio aspernatur, expedita quibusdam consequuntur inventore excepturi ut perspiciatis aliquid, atque a fuga ipsum possimus delectus, vitae aliquam</p>
+                 <a href="#" class="btn btn-sm border btn-podcast mt-5"> <i class="fa-solid fa-tag"></i> Podcast</a>
+                <a href="#" class="btn btn-sm border bg-pimary btn-podcast mt-5"><i class="fa-solid fa-clock"></i> 55 mins </a>
+                  <a href="#" class="btn btn-sm border  btn-podcast2 mt-5"><i class="fa-solid fa-play"></i> Play Episode</a>
+              </div><!-- podcast-title -->
+              <div class="podcast-image col-4 h-100 rounded rounded-lg">
+
+              </div><!-- podcast-image -->
+        </div><!-- /podcast-row -->
+        <div class="row podcast-row d-flex border border-1 pe-4 mb-4 shadow-lg rounded rounded-lg ">
+            <div class="podcast-image-2 col-4 h-100 rounded rounded-lg">
+
+            </div><!-- podcast-image -->
+            <div class="podcast-title h-auto  pt-5 col-8 ">
+                <h1 class="pt-1"style="color:rgb(198, 157, 32);">Podcast title</h1>
+                <span class=""><i class="fa-regular fa-calendar-days"></i> Sun,April 19th 2025</span>
+                <div class="line2 mb-2 mt-3">
+      
+                </div><!-- /line -->
+                <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At soluta minus molestiae ea dolorem impedit veritatis saepe harum, quisquam, doloremque sequi? Adipisci, voluptate? Ad blanditiis voluptates eum aspernatur dicta. Doloremque, voluptate? Optio aspernatur, expedita quibusdam consequuntur inventore excepturi ut perspiciatis aliquid, atque a fuga ipsum possimus delectus, vitae aliquam</p>
+                 <a href="#" class="btn btn-sm border btn-podcast mt-5"> <i class="fa-solid fa-tag"></i> Podcast</a>
+                <a href="#" class="btn btn-sm border bg-pimary btn-podcast mt-5"><i class="fa-solid fa-clock"></i> 55 mins </a>
+                  <a href="#" class="btn btn-sm border  btn-podcast3 mt-5"><i class="fa-solid fa-play"></i> Play Episode</a>
+              </div><!-- podcast-title -->
+              
+        </div><!-- /podcast-row -->
+        <div class="row podcast-row d-flex  border border-1 ps-4  rounded rounded-lg mb-4 shadow-lg">
+            <div class="podcast-title h-auto  pt-5 col-8 ">
+                <h1 class="pt-1" style="color:rgb(198, 157, 32);">Podcast title</h1>
+                <span class=""><i class="fa-regular fa-calendar-days"></i> Sun,April 19th 2025</span>
+                <div class="line3 mb-2 mt-3">
+      
+                </div><!-- /line -->
+                <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At soluta minus molestiae ea dolorem impedit veritatis saepe harum, quisquam, doloremque sequi? Adipisci, voluptate? Ad blanditiis voluptates eum aspernatur dicta. Doloremque, voluptate? Optio aspernatur, expedita quibusdam consequuntur inventore excepturi ut perspiciatis aliquid, atque a fuga ipsum possimus delectus, vitae aliquam</p>
+                 <a href="#" class="btn btn-sm border btn-podcast mt-5"> <i class="fa-solid fa-tag"></i> Podcast</a>
+                <a href="#" class="btn btn-sm border bg-pimary btn-podcast mt-5"><i class="fa-solid fa-clock"></i> 55 mins </a>
+                  <a href="#" class="btn btn-sm border  btn-podcast4 mt-5"><i class="fa-solid fa-play"></i> Play Episode</a>
+              </div><!-- podcast-title -->
+              <div class="podcast-image-3 col-4 h-100 rounded rounded-lg">
+
+              </div><!-- podcast-image -->
+        </div><!-- /podcast-row -->
+        <div class="row podcast-row d-flex  border border-1 pe-4  rounded rounded-lg  mb-4 shadow-lg">
+            <div class="podcast-image-4 col-4 h-100 rounded rounded-lg">
+
+            </div><!-- podcast-image -->
+            <div class="podcast-title h-auto  pt-5 col-8 ">
+                <h1 class="pt-1" style="color:rgb(198, 157, 32);">Podcast title</h1>
+                <span class=""><i class="fa-regular fa-calendar-days"></i> Sun,April 19th 2025</span>
+                <div class="line4 mb-2 mt-3">
+      
+                </div><!-- /line -->
+                <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At soluta minus molestiae ea dolorem impedit veritatis saepe harum, quisquam, doloremque sequi? Adipisci, voluptate? Ad blanditiis voluptates eum aspernatur dicta. Doloremque, voluptate? Optio aspernatur, expedita quibusdam consequuntur inventore excepturi ut perspiciatis aliquid, atque a fuga ipsum possimus delectus, vitae aliquam</p>
+                 <a href="#" class="btn btn-sm border btn-podcast mt-5"> <i class="fa-solid fa-tag"></i> Podcast</a>
+                <a href="#" class="btn btn-sm border bg-pimary btn-podcast mt-5"><i class="fa-solid fa-clock"></i> 55 mins </a>
+                  <a href="#" class="btn btn-sm border  btn-podcast5 mt-5"><i class="fa-solid fa-play"></i> Play Episode</a>
+              </div><!-- podcast-title -->
+             
+        </div><!-- /podcast-row -->
+        
+        
+       </div><!-- sec5-content -->
+      </div><!-- /sec5 -->
+      <div class="last-sec ">
+          <h2 class="text-center gradient-text mb-5">JOIN US </h2>
+          <!--  i made a div to contain icon divs and gave it d-flex and 
+            justify-content-between to make first and last div ivon on the edges 
+            and equal spaces between icons ,and gave the icons width and height with css  -->
+          <div class="last-sec-icons mx-auto  text-center mb-4">
+           
+            <div class=" d-flex justify-content-between row">
+                <div class="col-12 col-md-3">
+                    <div class="last-sec-icon  border p-3 shadow-lg rounded">
+                        <p class="lead fs-5  fw-bold">Subscribe now </p>
+                        <img src="images/twitter.png" class="last-sec-img" alt="">
+                        <!-- fa-5x makes the icons be very big -->
+                        <p class="lead fs-5 fw-bold">Go to link</p>
+    
+    
+                    </div><!-- /last-sec-icon -->
+                </div><!-- col1 -->
+                <div class="col-12 col-md-3">
+                    <div class="last-sec-icon  border p-3 shadow-lg rounded ">
+                        <p class="lead fs-5 fw-bold">Follow </p>
+                         <img src="images/whatsapp.png" class="last-sec-img" alt="">
+                         <!-- the icons from the website:https://iconscout.com/3d-illustrations/3d-icons-twitter
+                          this provides 3d images and you can download them as png -->
+                        <p class="lead fs-5 fw-bold"> Go to link</p>
+                    </div><!-- /last-sec-icon -->
+                </div><!-- col-2 -->
+                <div class="col-12 col-md-3">
+                    <div class="last-sec-icon  border  p-3 shadow-lg rounded">
+                        <p class="lead fs-5 fw-bold">Like the page</p>
+                       <img src="images/linkedin.png" class="last-sec-img" alt="">
+                        <p class="lead fs-5 fw-bold">Go to link</p>
+                    </div><!-- /last-sec-icon -->
+                </div><!-- col-3 -->
+                 <div class="col-12 col-md-3">
+                    <div class="last-sec-icon border p-3 shadow-lg rounded">
+                        <p class="lead fs-5 fw-bold">Watch videos</p>
+                        <img src="images/instagram.png"class="last-sec-img"  alt="">
+                        <p class="lead fs-5 fw-bold">Go to link</p>
+                    </div><!-- /last-sec-icon -->
+                 </div><!-- col-4 -->
+                
+           
+            </div><!-- /d-flex ,row -->       
+          
+          </div><!-- /last-sec-icons -->
+
+          <div class="footer bg-warning container-fluid p-1 " >
+            <div class="row  d-flex justify-content-between">
+            <div class="part1 text-center col-12 col-md-3">
+            <hr class="border border-2 border-white">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.jpg" alt="Logo" class="rounded-circle img-fluid navbar-logo foo"  style="height: 50px; width: auto;">
+              </a>
+              <span class="text-white fs-5"> Good Company</span>
+              <hr class="border border-2 border-white">
+              <p class="text-white">Tel:000-000-000</p>
+              <p class="text-white">Address:EGYPT</p>
+              <p class="text-white">Fax:000-000-000</p>
+            </div><!-- /part1 -->
+            <div class="part2 col-12 col-md-3 text-center">
+                <hr class="border border-2 border-white">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.jpg" alt="Logo" class="rounded-circle img-fluid navbar-logo footer-img"  style="height: 50px; width: auto;">
+                  </a>
+                  <span class="text-white fs-5"> important links</span>
+                  <hr class="border border-2 border-white">
+                  <p class="p-footer">Visit Us</p>
+                  <p class="p-footer">Take alook</p>
+                  <p class="p-footer">Your health is more important</p>
+            </div><!-- /part2 -->
+            <div class="part3 col-12 col-md-3 text-center">
+                <hr class="border border-2 border-white">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.jpg" alt="Logo" class="rounded-circle img-fluid navbar-logo footer-img"  style="height: 50px; width: auto;">
+                  </a> <span class="text-white fs-5">Vision</span>
+                  <hr class="border border-2 border-white">
+                  <p class="text-white">services for all</p>
+                  
+                  <p class="text-white">Provide best services</p>
+                  <p class="text-white">You will be better than before</p>
+            </div><!-- /part3 -->
+            </div><!-- d-flex -->
+            <hr class="border border-2 border-white">
+            <p class="gradient-text text-center fs-5">
+                COPYRIGHT &copy 2020 SHIMAAHUSSIN EL SAID GOOD COMPANT .ALL Rights
+
+            </p>
+            <hr class="mb-5 border border-2 border-white">
+
+          </div><!-- /footer -->
+      </div><!-- /last sec -->
+  
+    </div><!-- /body-content -->
+  
+  
+       
+    
+   
+       <script src="js/bootstrap.bundle.min.js"></script>
+       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+       
+       <script src="js/script.js"></script>
+</body>
+</html>

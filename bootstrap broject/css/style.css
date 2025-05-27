@@ -1,0 +1,544 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+   
+}
+.navbar1{
+ opacity: .8;
+ height: 10vh;
+}
+.thecarousel{
+    height: 100vh;
+}
+.trips:hover{
+font-size:18px;
+font-weight: bolder;
+
+}
+
+
+.trips:hover .T-letter{
+    color:rgb(4, 56, 88);
+}
+.nav-button:hover{
+    opacity: .7;
+}
+
+
+.nav-button{
+  
+}
+.nav-words{
+    font-size:18px;
+}
+.social-icons{
+    width:90px;
+    height:300px;
+    color:rgb(236, 179, 7);
+    font-size:60px; 
+}
+ .social-icons i:hover {
+    opacity:1 !important;
+}
+/* .search-input{
+    width: 215px;
+} */
+.carousel-caption{
+    height: 200px;
+    background: rgba(46, 78, 114, 0.5);
+}
+.p-caption, .carousel-caption .btn {
+    font-size:20px;
+}
+.modal-backdrop {
+    z-index:-1 !important;
+}
+.welcome{
+    height:230px;
+
+}
+.gradient-text {
+   
+    font-weight: bold;
+    background: linear-gradient(90deg, #5a07ad, #0d0c04);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  /* this for making two colors to the same font */
+
+
+  .accordion-chevron {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #6c757d; /* Bootstrap's secondary color */
+  }
+  .accordion-button:not(.collapsed) .accordion-chevron {
+    transform: rotate(180deg);
+    color: #bfb00d; /* Bootstrap's primary blue */
+  }
+  /* to make the chevron rotate and change the color when the button not collapsed */
+  #copy-btn{
+    color:#cbc5aa;
+}
+.translation-header{
+    height:75px;
+    
+}
+.translation-form{
+    height:310px;
+    background-color:  rgb(241, 226, 181);
+    color:#FFFDD0;
+   
+}
+.copy-message {
+    color:white;
+   
+    
+    height: 20px;
+    position:absolute;
+    z-index:3;
+    font-size: 15px;
+    background-color: black;
+    width:70px;
+    opacity: 0;
+    transition: opacity 0.1s;
+  
+  }
+  
+  .copy-message.show {
+    opacity: 1;
+  }
+ 
+#comment {
+    height: 150px; /* Adjust the height as needed */
+  }
+.formContent{
+    width:95%;
+}
+.w-97{
+  width:97% !important;
+}
+.w-80{
+  width:80% !important;
+}
+.sec3{
+    
+    height: auto;
+    width: 100%;
+}
+
+.sec3-content{
+   
+    background-image:url(../images/beach4.jpg);
+    width:100%;
+    height:auto;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.sec3-overlay,.sec4-overlay{
+    width:100%;
+    height:43%;
+}
+.cards-section{
+    height:auto;
+    width:100%;
+   
+
+}
+/* in div of cards i made the class cards-after to make the pseudo element before and after 
+  i gave it postion relative to give both the before and after position absolute
+  ,to both i wrote the common arrtibute together and unique attributes for each one separated (
+  the position the element appears from)*/
+.card-after{
+    position:relative;
+}
+.card-after:after,.card-after:before{
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    
+    background-color: rgb(239, 208, 86);
+    opacity:1;
+    transition: 1s;
+}
+.card-after:after{
+    right:0;
+    bottom:0;
+
+}
+.card-after:before{
+    top:0;
+    left:0;
+}
+.card-after:hover::after,.card-after:hover::before{
+    width:100%;
+    height:100%;
+    opacity:.2;
+}
+.card-styles{
+    height: 510px;
+    width:370px;
+}
+.h-85{
+    height:85% !important;
+}
+.sec4{
+    height: auto;
+    width:100%;
+    background-color: rgb(236, 232, 232);
+}
+
+
+
+.sec4-mini-background{
+    background-image:url(../images/beach9.jpg);
+    background-position:center;
+    width:100%;
+    height:auto;
+    background-attachment:fixed;
+    background-size:cover;
+
+
+}
+.thanks{
+    height:125px;
+
+
+}
+.person-card:hover{
+  transform:scale(.9);
+
+}
+.overlay-color{
+  background-color: rgba(0, 0, 0, 0.5); border-radius: 16px;
+
+}
+
+.person-card:hover .overlay-color{
+    background-color: rgba(19, 61, 88, 0.5);
+     border-radius: 12px;
+     height:400px;
+}
+.container-person-card,.container-podcast,.last-sec-icons{
+    width:83%;
+}
+.sec5{
+    height:auto;
+    background-color: rgb(236, 232, 232);
+   
+    
+}
+.line{
+   height:5px;
+   width:110px;
+   background-color:rgb(249, 201, 9);
+   border-radius: 3px;
+
+}
+.line2{
+    height:5px;
+    width:110px;
+    background-color:rgb(14, 71, 147);
+    border-radius: 3px;
+ 
+ }
+ .line3{
+    height:5px;
+    width:110px;
+    background-color:rgb(14, 67, 8);
+    border-radius: 3px;
+ 
+ }
+ .line4{
+    height:5px;
+    width:110px;
+    background-color:rgb(110, 16, 107);
+    border-radius: 3px;
+ 
+ }
+
+.podcast-title:hover .line{
+    width:140px;
+}
+.podcast-title:hover .line2{
+    width:140px;
+}
+.podcast-title:hover .line3{
+    width:140px;
+}
+.podcast-title:hover .line4{
+    width:140px;
+}
+.btn-podcast:hover{
+    background-color: #6c757d;
+}
+.btn-podcast2:hover{
+    background-color: #d5c15a;
+    color:aliceblue;
+}
+.btn-podcast3:hover{
+    background-color: #101aab;
+    color:aliceblue;
+}
+.btn-podcast4:hover{
+    background-color: rgb(14, 67, 8);
+    color:aliceblue;
+}
+.btn-podcast5:hover{
+    background-color: rgb(110, 16, 107);
+    color:aliceblue;
+}
+
+.podcast-image{
+    background-image: url(../images/beach1.jpg);
+    
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    clip-path: polygon(9% 0, 100% 0%, 100% 100%, 18% 100%, 15% 74%);
+
+
+
+    
+    
+}
+
+
+.podcast-image-2{
+    background-image: url(../images/beach2.jpg);
+    
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    clip-path: polygon(0% 0%, 75% 0%, 81% 53%, 86% 100%, 0% 100%);
+
+
+    
+    
+}
+.podcast-image-3{
+    background-image: url(../images/beach3.jpg);
+    
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    clip-path: polygon(9% 0, 100% 0%, 100% 100%, 18% 100%, 15% 74%);
+
+
+    
+    
+}
+
+.podcast-image-4{
+    background-image: url(../images/beach4.jpg);
+    
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    clip-path: polygon(0% 0%, 75% 0%, 81% 53%, 86% 100%, 0% 100%);
+
+
+    
+    
+}
+
+.podcast-row{
+    height:390px;
+    background-color: #cbcac8;
+    
+}
+
+.last-sec{
+    height:auto;
+    background-color:rgb(236, 232, 232);
+}
+
+.p-footer:hover{
+    color:rgb(176, 164, 164);
+}
+.last-sec-img{
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+}
+.footer-img{
+    filter: drop-shadow(0 0 12px white);
+}
+/* filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+makes shaow around item this shadow if it white it makes it as light comes from it   */
+
+/* Custom CSS */
+/* Mobile-specific styles */
+
+ 
+@media (max-width: 767.98px) {
+ 
+
+    .card-styles{
+      width:100%;
+      margin: auto;
+    
+    }
+
+    
+    /* Button sizing */
+    .btn-lg {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+  
+  .last-sec-icon{
+    margin: 15px;
+    transform:scale(.8);
+  }
+ 
+ 
+    .sec4-mini-background {
+      min-height: 250px; /* Even shorter background */
+    }
+  
+    .container-person-card {
+      width: 100%;
+      padding: 0 15px;
+      display: flex;
+      
+    }
+  
+    .row.pb-5 {
+      width: 100%;
+      margin: 0;
+      
+    }
+  
+    .person-card {
+      width: 90%; 
+      max-width: 320px; /* Slightly narrower max width */
+      height: 380px !important; /* Shorter height */
+      margin: 0 auto 25px; /* Centering with bottom margin */
+    }
+  
+    .card-img-overlay {
+      padding: 15px !important; /* Tighter padding */
+    }
+  
+    .card-head h4 {
+      font-size: 1rem; /* Smaller heading */
+      margin-bottom: 0.5rem;
+    }
+  
+    
+  
+    .img-description img {
+      width: 60px !important;
+      height: 80px !important;
+      
+      display: block;
+    }
+  
+    .thanks {
+      height: 70px;
+      padding: 0 15px;
+    }
+  
+    
+    .sec4 {
+        padding-bottom: 1rem !important; /* Was 2rem */
+      }
+      
+      /* Adjust the last row's bottom padding */
+      .container-person-card {
+        padding-bottom: 1.5rem !important; /* Was pb-5 (3rem) */
+      }
+      /* Mobile responsiveness for podcast rows */
+
+    .podcast-row {
+      height: auto !important; /* Remove fixed height */
+      min-height: 300px; /* Set minimum height */
+      padding: 20px 10px !important; /* Adjust padding */
+      flex-direction: column !important; /* Stack columns vertically */
+    }
+  
+    .podcast-title, 
+    .podcast-image,
+    .podcast-image-2,
+    .podcast-image-3,
+    .podcast-image-4 {
+      width: 100% !important; /* Full width */
+      max-width: 100% !important;
+      padding: 15px !important;
+    }
+  
+    .podcast-title {
+      order: 2; /* Make text appear below image */
+      padding-top: 0 !important;
+    }
+  
+    .podcast-image,
+    .podcast-image-2,
+    .podcast-image-3,
+    .podcast-image-4 {
+      order: 1; /* Make image appear first */
+      height: 200px !important; /* Fixed image height */
+      clip-path: none !important; /* Remove clip-path on mobile */
+      border-radius: 8px 8px 0 0 !important;
+    }
+  
+    .podcast-title h1 {
+      font-size: 1.5rem !important;
+    }
+  
+    .podcast-title p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem !important;
+    }
+  /* Adjust carousel height for small screens */
+
+  .thecarousel {
+    height: 500px; /* or whatever height you prefer */
+  }
+  
+  .thecarousel img {
+    min-height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    
+    padding: 20px !important;
+    height:150px;
+   
+  }
+  
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  
+    
+  }
+  
+  .carousel-caption p {
+    font-size: 1rem;
+
+  }
+  
+  .carousel-caption .btn {
+    padding:  0.5rem;
+    font-size:15px;
+    width:70px;
+    margin: auto;
+    
+  }
+
+   
+
+      
+  
+
+}
+
+ 
+
+
+
+
+
